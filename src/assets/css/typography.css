@@ -1,0 +1,55 @@
+@import url("https://use.typekit.net/mio4ldw.css");
+
+/* Document level adjustments */
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "orpheuspro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  font-size: 1.5rem;
+}
+.footer {
+  font-size: 0.75rem;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+
+/*/ Media Queries /*/
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  html {
+    font-size: 1rem;
+  }
+}

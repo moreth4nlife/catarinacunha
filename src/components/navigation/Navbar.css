@@ -1,0 +1,176 @@
+/*/ Navigation /*/
+
+.logo {
+  padding: 0 0 0 110px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__name {
+  font-weight: 700;
+  color: var(--grey);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+.nav--list {
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem 4rem 0 4rem;
+}
+.nav__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 35px;
+  color: var(--grey);
+  transition: all 0.5s linear;
+}
+.nav__link:hover {
+  transition: all 0.5s linear;
+}
+.nav__link:not(.nav__link__button):hover::before {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  height: 5px;
+  width: 5px;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  content: "";
+}
+
+/*/ Navigation Mobile /*/
+
+.nav--mobile {
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: 60px 1fr auto;
+  width: 100%;
+  min-height: 60px;
+  max-height: fit-content;
+  background-color: var(--pink);
+  border-bottom: 1px solid var(--grey);
+  transition: max-height 0.5s linear;
+}
+.nav--mobile.open {
+  max-height: fit-content;
+}
+
+.nav--mobile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--paddingMobile);
+}
+
+.nav--wrapper {
+  width: auto;
+}
+
+.nav--mobile-toggle {
+  display: none;
+  border-radius: 5px;
+  background-color: transparent;
+  float: right;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+.nav--mobile-toggle.open span:first-child {
+  transform: rotate(45deg) translate(4.4px, 4.4px);
+}
+.nav--mobile-toggle.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.nav--mobile-toggle.open span:last-child {
+  transform: rotate(-45deg) translate(2.4px, -2.4px);
+}
+.nav--mobile-toggle span {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 4px;
+  background-color: var(--grey);
+  transition: all 0.25s;
+}
+
+.nav--mobile .nav--list .nav__link {
+  padding: 8px 15px;
+  color: var(--grey);
+}
+.nav--contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 118px;
+  border-left: 1px solid var(--grey);
+  height: 100%;
+}
+.nav--contacts a {
+  font-weight: 700;
+  color: var(--grey);
+}
+
+@media screen and (max-width: 480px) {
+  .nav--wrapper {
+    width: calc(100vw - var(--mobilePadding));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.5s linear;
+  }
+  .nav--mobile-toggle--wrapper {
+    padding: 0 1rem;
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
+  }
+  .nav--mobile-toggle {
+    display: block;
+  }
+  .nav--list {
+    display: none;
+    transition: all 1s linear;
+  }
+  .logo {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  .nav--contacts {
+    display: none;
+    justify-content: flex-start;
+    height: fit-content;
+    padding: var(--paddingMobile);
+    padding-bottom: 0.5rem;
+    border: none;
+  }
+  .nav--contacts .nav--contacts__text {
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    width: 100vw;
+    height: 92px;
+    border-bottom: 1px solid var(--grey);
+  }
+  .nav--list {
+    grid-column-start: 2.5fr;
+  }
+}

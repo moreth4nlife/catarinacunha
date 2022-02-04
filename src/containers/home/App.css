@@ -1,4 +1,8 @@
 .App {
+  margin: var(--marginDesktopLarge);
+  min-height: 100vh;
+  border-right: 1px solid var(--grey);
+  border-left: 1px solid var(--grey);
   text-align: center;
 }
 
@@ -34,5 +38,26 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .App {
+    margin: var(--marginDesktopLarge);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .App {
+    margin: var(--marginDesktopMedium);
+  }
+}
+
+@media only screen and (device-width: 768px) {
+}
+
+@media only screen and (max-device-width: 480px) {
+  .App {
+    margin: var(--marginMobile);
   }
 }
