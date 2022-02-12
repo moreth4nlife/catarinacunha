@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { NavLinks } from './NavItems';
 import { useWindowSize } from "../../utils/ResponsiveHook";
@@ -12,11 +12,21 @@ const Navbar = () => {
 
   useEffect(() => {
     setMobileState(size.width && size.width <= 768 ? true : false);
-  }, [size.width])
+  }, [size.width]);
+
+  const menuMobileOpenCSS: CSSProperties = {
+    gridColumn: "1 / span 4",
+    padding: "1rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    visibility: "visible",
+    opacity: "1"
+  }
 
   return (
     <nav
-      className={`nav flex flex--align-center ${isMobile ? "nav--mobile" : ""} ${isMobile && isMobileMenuOpen ? "open" : ""} `}>
+      className={`nav ${isMobile ? "nav--mobile" : ""} ${isMobile && isMobileMenuOpen ? "open" : ""} `}>
 
       <div
         style={isMobile && isMobileMenuOpen ? { borderBottom: "1px solid var(--grey)" } : {}}
@@ -36,28 +46,29 @@ const Navbar = () => {
           </div>
         </div>
 
+        <ul
+          style={isMobile && isMobileMenuOpen ? menuMobileOpenCSS : {}}
+          className="nav--list flex flex--align-center ">
+          {NavLinks.map((link, index) => {
+            return (
+              <Link key={index} to={link.url}>
+                <li className={link.class}>{link.title}</li>
+              </Link>
+            )
+          })}
+        </ul>
+
       </div>
 
+      {!isMobile &&
+        <div
+          className="nav--contacts">
+          <Link to="/#contacts" className='nav--contacts__text'>
+            <span>Contact</span>
+          </Link>
+        </div>
+      }
 
-      <ul
-        style={isMobile && isMobileMenuOpen ? { display: "flex", flexDirection: "column", alignItems: "flex-start", visibility: "visible", opacity: "1" } : {}}
-        className="nav--list flex flex--align-center ">
-        {NavLinks.map((link, index) => {
-          return (
-            <Link key={index} to={link.url}>
-              <li className={link.class}>{link.title}</li>
-            </Link>
-          )
-        })}
-      </ul>
-
-      <div
-        className="nav--contacts"
-        style={isMobile && isMobileMenuOpen ? { display: "flex" } : {}}>
-        <Link to="/#contacts" className='nav--contacts__text'>
-          <span>Contact</span>
-        </Link>
-      </div>
     </nav>
   )
 

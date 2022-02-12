@@ -18,5 +18,10 @@ export const NavLinks = [
     title: "Skills",
     url: "https://www.google.com",
     class: "nav__link"
+  },
+  {
+    title: "Contact",
+    url: "https://www.google.com",
+    class: "nav__link contacts"
   }
 ]

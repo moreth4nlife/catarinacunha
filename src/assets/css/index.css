@@ -3,6 +3,8 @@
 @import url("./theme-palete.css");
 
 :root {
+  --mobileMenuHeight: 60px;
+  --desktopMenuHeight: 92px;
   --marginDesktopLarge: 0 240px;
   --marginDesktopMedium: 0 120px;
   --paddingDesktopLarge: 0 240px;
