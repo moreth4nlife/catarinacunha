@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: center;
 }
+.logo:hover {
+  cursor: pointer;
+}
 .logo__name {
   font-weight: 700;
   color: var(--grey);
@@ -17,6 +20,7 @@
   top: 0;
   left: 0;
   margin: 0;
+  background-color: var(--pink);
 }
 .nav--list {
   width: 100%;
@@ -127,11 +131,11 @@
   }
 
   .nav--mobile-toggle--wrapper {
-    padding: 0 1rem;
-    width: fit-content;
+    width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
+    justify-content: center;
     border-left: 1px solid var(--grey);
     border-right: 1px solid var(--grey);
   }
@@ -195,7 +199,7 @@
   .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100vw;
+    width: 100%;
     height: 92px;
     border-bottom: 1px solid var(--grey);
   }
@@ -203,9 +207,13 @@
     grid-column: 1 / span 3;
     padding: 0;
     min-width: fit-content;
+    border-left: 1px solid var(--grey);
   }
   .nav__link.contacts {
     display: none;
+  }
+  .nav--contacts {
+    border-right: 1px solid var(--grey);
   }
 }
 

@@ -1,27 +1,27 @@
 export const NavLinks = [
   {
     title: "About me",
-    url: "https://www.google.com",
+    url: "#about",
     class: "nav__link"
   },
   {
     title: "Career",
-    url: "https://www.google.com",
+    url: "#career",
     class: "nav__link"
   },
   {
     title: "Portfolio",
-    url: "https://www.google.com",
+    url: "#portfolio",
     class: "nav__link"
   },
   {
     title: "Skills",
-    url: "https://www.google.com",
+    url: "#skills",
     class: "nav__link"
   },
   {
     title: "Contact",
-    url: "https://www.google.com",
+    url: "#contacts",
     class: "nav__link contacts"
   }
 ]

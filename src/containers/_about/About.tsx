@@ -4,7 +4,7 @@ import avatarSrc from '../../assets/images/_avatarHeader.svg';
 
 const About = () => {
   return (
-    <section className='about-wrapper'>
+    <section className='about-wrapper' id="about">
 
       <div className='about--block left'>
 

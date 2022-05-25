@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './assets/css/index.css';
+import Navbar from './components/navigation/Navbar';
 import App from './containers/home/App';
+import PortfolioItem from './containers/_portfolio/PortfolioItem';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Navbar />
+
+      <Switch>
+        <Route exact path="/" >
+          <App />
+        </Route>
+        <Route path="/portfolio/:id">
+          <PortfolioItem />
+        </Route>
+      </Switch>
+
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

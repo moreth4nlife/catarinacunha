@@ -1,10 +1,9 @@
 import React from 'react';
 import './_header.css';
-import avatarSrc from '../../assets/images/_asd.svg';
 
 const Header = () => {
   return (
-    <header>
+    <header className="main--header" id="header">
       <div className='header--block left'>
         <h1>
           Hello there,<br /> I'm Catarina Cunha

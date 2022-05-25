@@ -1,0 +1,107 @@
+.portfolio--item__wrapper {
+  margin: var(--marginDesktopLarge);
+  min-height: 100vh;
+  border-right: 1px solid var(--grey);
+  border-left: 1px solid var(--grey);
+}
+
+.grid--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+}
+
+.item__header {
+  grid-column: 1 / span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--grey);
+}
+.header__info {
+  padding: 4rem;
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.keyword__label {
+  margin: 0 5px;
+}
+
+.header__image {
+  grid-column: 3 / 5;
+}
+
+.item--article {
+  padding: 4rem;
+  border-bottom: 1px solid var(--grey);
+  grid-column: 1 / 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.article__description {
+  margin-top: 30px;
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.gallery--wrapper {
+  border-bottom: 1px solid var(--grey);
+  grid-column: 1 / 5;
+}
+
+/*/ /*/
+
+@media screen and (min-width: 1441px) {
+  .portfolio--item__wrapper {
+    margin: var(--marginDesktopLarge);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .portfolio--item__wrapper {
+    margin: var(--marginDesktopMedium);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .grid--container {
+    padding-top: var(--mobileMenuHeight);
+    min-height: calc(100vh - var(--mobileMenuHeight));
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  
+  .header__info, .item--article {
+    padding: 2rem;
+  }
+
+  .article__description {
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .grid--container {
+    padding-top: var(--desktopMenuHeight);
+    min-height: calc(100vh - var(--desktopMenuHeight));
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .portfolio--item__wrapper {
+    margin: var(--marginMobile);
+  }
+}

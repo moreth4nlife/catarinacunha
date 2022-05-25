@@ -9,15 +9,20 @@
   --marginDesktopMedium: 0 120px;
   --paddingDesktopLarge: 0 240px;
   --paddingDesktopMedium: 0 120px;
-  --marginMobile: 0 4rem;
-  --paddingMobile: 0 4rem;
+  --marginMobile: 0 2rem;
+  --paddingMobile: 0 2rem;
 }
-
-/*/ Flexbox Helpers /*/
 
 body {
   background-color: var(--pink);
 }
+
+.swiper-button-next, .swiper-button-prev {
+  color:white !important;
+  transform: scale(0.8);
+}
+
+/*/ Flexbox Helpers /*/
 
 .flex {
   display: flex;
@@ -32,3 +37,5 @@ body {
 .flex--justify-between {
   justify-content: space-between;
 }
+
+/*/ Re-usable CSS /*/

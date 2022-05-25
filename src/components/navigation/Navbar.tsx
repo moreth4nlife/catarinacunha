@@ -1,11 +1,13 @@
 import React, { CSSProperties, useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from "react-router-hash-link";
+import { useHistory } from "react-router-dom";
 import { NavLinks } from './NavItems';
 import { useWindowSize } from "../../utils/ResponsiveHook";
 import logoSrc from '../../assets/images/logo.svg';
 import './Navbar.css';
 
 const Navbar = () => {
+  const history = useHistory();
   const size = useWindowSize();
   const [isMobile, setMobileState] = useState<boolean>(false);
   const [isMobileMenuOpen, setMobileMenuState] = useState<boolean>(false);
@@ -14,6 +16,10 @@ const Navbar = () => {
     setMobileState(size.width && size.width <= 768 ? true : false);
   }, [size.width]);
 
+  const removeHash = () => {
+    history.push("/")
+  }
+
   const menuMobileOpenCSS: CSSProperties = {
     gridColumn: "1 / span 4",
     padding: "1rem",
@@ -21,8 +27,13 @@ const Navbar = () => {
     flexDirection: "column",
     alignItems: "flex-start",
     visibility: "visible",
-    opacity: "1"
+    opacity: "1",
+    backgroundColor: "var(--pink)",
+    borderLeft: "1px solid var(--grey)",
+    borderRight: "1px solid var(--grey)",
+    borderTop: "1px solid var(--grey)"
   }
+
 
   return (
     <nav
@@ -31,9 +42,13 @@ const Navbar = () => {
       <div
         style={isMobile && isMobileMenuOpen ? { borderBottom: "1px solid var(--grey)" } : {}}
         className="nav--mobile-wrapper">
-        <div className="logo">
+
+        {/* <Link to="/#header" smooth> */}
+        <div className="logo" onClick={() => { window.scrollTo(0, 0); history.push("/"); }}>
           <span className="logo__name">Catarina Cunha</span>
         </div>
+        {/* </Link> */}
+
 
         <div className="nav--mobile-toggle--wrapper">
           <div
@@ -51,7 +66,7 @@ const Navbar = () => {
           className="nav--list flex flex--align-center ">
           {NavLinks.map((link, index) => {
             return (
-              <Link key={index} to={link.url}>
+              <Link key={index} to={link.url} smooth>
                 <li className={link.class}>{link.title}</li>
               </Link>
             )
@@ -63,7 +78,7 @@ const Navbar = () => {
       {!isMobile &&
         <div
           className="nav--contacts">
-          <Link to="/#contacts" className='nav--contacts__text'>
+          <Link to="/#contacts" className='nav--contacts__text' smooth>
             <span>Contact</span>
           </Link>
         </div>
