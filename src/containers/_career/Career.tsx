@@ -62,7 +62,7 @@ const Career = () => {
       <section className='career-wrapper' id="career">
 
         <div className='section-title'>
-          <h2>Career</h2>
+          <h2>My Career</h2>
         </div>
 
         <div className='career--block left'>

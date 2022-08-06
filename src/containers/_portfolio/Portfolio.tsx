@@ -24,7 +24,7 @@ const Portfolio = () => {
 
               <div className='item--footer'>
                 {item.date}
-                <Link to={`portfolio/${item.id}`}>Go to <span className='item__icon'><HiArrowSmUp /></span></Link>
+                <Link to={`portfolio/${item.id}`}>View project <span className='item__icon'><HiArrowSmUp /></span></Link>
               </div>
             </li>
           )

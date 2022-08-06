@@ -19,14 +19,20 @@
   align-items: flex-start;
 }
 .header--block.left h1 {
+  font-size: 72px;
   font-weight: 700;
+}
+.header--block.left h1 .title__special--char {
+  font-feature-settings: "ss01" 1, "ss02" 1;
 }
 .header--block.left h1,
 .header--block.left p {
   text-align: left;
+  color: var(--grey);
 }
 .header--block.left p {
   margin-top: 45px;
+  font-size: 24px;
 }
 
 .header--block.right {

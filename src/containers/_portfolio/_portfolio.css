@@ -12,6 +12,9 @@
   border-bottom: 1px solid var(--grey);
   text-align: left;
 }
+.section-title h2 {
+  font-size: 48px;
+}
 .item--grid {
   grid-column: 1 / span 4;
   display: grid;
@@ -24,7 +27,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  border-bottom: 1px solid var(--grey);
 }
 .item:nth-child(odd) {
   grid-column: 1 / span 2;
@@ -35,7 +37,7 @@
 }
 
 .item p{
-  margin: 50px 0;
+  margin: 2rem 0;
 }
 
 .item a {
@@ -48,6 +50,10 @@
 }
 .item__icon svg {
   transform: scale(1.1) rotate(45deg) translate(3px, 0px) ;
+}
+
+.item--footer a {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {

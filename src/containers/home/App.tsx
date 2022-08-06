@@ -4,7 +4,7 @@ import Header from "../_header/Header";
 import About from "../_about/About";
 import Career from "../_career/Career";
 import Portfolio from "../_portfolio/Portfolio";
-import PortfolioItem from "../_portfolio/PortfolioItem";
+import Skills from "../_skills/Skills";
 import "./App.css";
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <About />
         <Career />
         <Portfolio />
+        <Skills />
       </div>
     </main>
   );

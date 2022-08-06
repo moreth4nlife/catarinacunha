@@ -40,13 +40,14 @@
 }
 .experience--block,
 .education--block {
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   text-align: left;
 }
-.experience--block div,
-.education--block div {
+.experience--block div:not(:last-child),
+.education--block div:not(:last-child) {
   margin-bottom: 15px;
 }
+
 
 @media screen and (max-width: 768px) {
   .career-wrapper {

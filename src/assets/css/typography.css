@@ -18,15 +18,10 @@ body {
   font-size: 0.75rem;
 }
 
-h1 {
-  font-size: 3em;
+h1, h2, h3, h4, h5, h6 {
+  color:var(--grey);
 }
-h2 {
-  font-size: 2.5em;
-}
-h3 {
-  font-size: 2em;
-}
+
 
 /*/ Media Queries /*/
 
