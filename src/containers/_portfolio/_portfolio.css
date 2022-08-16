@@ -27,7 +27,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
+  border-bottom: 1px solid var(--grey);
 }
+
+.item:nth-child(odd) ~ .item:last-child,
+.item:nth-child(even) ~ .item:nth-last-child(2) {
+  border-bottom:none;
+}
+
 .item:nth-child(odd) {
   grid-column: 1 / span 2;
   border-right: 1px solid var(--grey);
@@ -63,5 +70,14 @@
   }
   .item {
     padding: 2rem;
+    border-right: none;
+  }
+
+  .item:nth-child(2n+1) {
+    border-right: none;
+  }
+
+  .item:nth-child(even) ~ .item:nth-last-child(2) {
+    border-bottom:1px solid var(--grey);
   }
 }

@@ -22,6 +22,39 @@ body {
   transform: scale(0.8);
 }
 
+footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 4rem;
+  min-height: 200px;
+  background-color: var(--grey);
+
+}
+
+footer div {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--pink);
+}
+
+footer div:first-child {
+  padding-left: 4rem; 
+  grid-column: 1 / 3;
+}
+
+footer div:last-child {
+  padding-right: 4rem;
+  grid-column: 3 / 5;
+  justify-self: flex-end;
+}
+
+footer div a, footer div a:hover, footer a:visited {
+  color: var(--pink);
+}
+
 /*/ Flexbox Helpers /*/
 
 .flex {
@@ -39,3 +72,39 @@ body {
 }
 
 /*/ Re-usable CSS /*/
+
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    padding: 2rem !important;
+  }
+  .section-title h2 {
+    font-size: 28px !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  footer {
+    padding: var(--paddingDesktopMedium);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  footer {
+    padding: var(--paddingDesktopLarge);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  footer {
+    padding: var(--paddingDesktopMedium);
+  }
+
+  footer div:first-child {
+    padding-left: 2rem; 
+  }
+  
+  footer div:last-child {
+    padding-right: 2rem;
+  }
+}

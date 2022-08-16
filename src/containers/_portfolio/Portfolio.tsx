@@ -18,15 +18,17 @@ const Portfolio = () => {
       <ul className='item--grid'>
         {portfolioItems.map((item, i) => {
           return (
-            <li key={i} className='item'>
-              <h3>{item.title}</h3>
-              <p>{item.shortDescription}</p>
+            <div className='item'>
+              <li key={i}>
+                <h3>{item.title}</h3>
+                <p>{item.shortDescription}</p>
 
-              <div className='item--footer'>
-                {item.date}
-                <Link to={`portfolio/${item.id}`}>View project <span className='item__icon'><HiArrowSmUp /></span></Link>
-              </div>
-            </li>
+                <div className='item--footer'>
+                  {item.date}
+                  <Link to={`portfolio/${item.id}`}>View project <span className='item__icon'><HiArrowSmUp /></span></Link>
+                </div>
+              </li>
+            </div>
           )
         })}
       </ul>
