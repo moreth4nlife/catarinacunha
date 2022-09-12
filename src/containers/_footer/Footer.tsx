@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <section className='footer--wrapper'>
         <div className='footer__title'>
-          <h3>Contact me</h3>
+          <h2>Contact me</h2>
         </div>
         <div className='footer__emoji' role="img" aria-label="emoji_footer" />
         <div className='footer__contacts'>

@@ -48,6 +48,10 @@
     flex-direction: column;
   }
 
+  .footer__title {
+    align-self: flex-start;
+  }
+
   .footer__emoji {
     display: none;
   }
@@ -60,15 +64,22 @@
 
   .footer__contacts {
     margin: 2rem 0;
+    gap: 10px;
+    width: 100%;
+  }
+  .footer__contacts a {
+    display: flex;
+    font-size: 14px;
   }
 
-  .footer__contacts a {
-    margin: 0 15px;
+  .footer__contacts a:first-child {
+    text-align: left;
   }
+
 }
 
 @media screen and (max-width: 480px) {
   .footer__emoji__mobile {
-    background-size: 80%;
+    background-size: 50%;
   }
 }

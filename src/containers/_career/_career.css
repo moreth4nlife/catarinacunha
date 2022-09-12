@@ -59,6 +59,7 @@
     height: 100%;
     min-height: 300px;
     border-right: none;
+    border-bottom: 1px solid var(--grey);
   }
   .section-title,
   .career--block {
