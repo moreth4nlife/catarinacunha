@@ -9,12 +9,10 @@ const Header = () => {
           Hell<span className='title__special--char'>o</span> there,<br /> I'm Catar<span className='title__special--char'>i</span>na Cunha
         </h1>
         <p>
-          I have a major in Communication Sciences and a master in <br /> Communication Design. I would say I’m a pretty good communicator!
+          I have a degree in Communication Sciences and a master's in <br /> Communication Design. I would say I’m a pretty good communicator!
         </p>
       </div>
-      <div
-        className='header--block right'>
-      </div>
+      <div className='header--block right'></div>
     </header>
   );
 };

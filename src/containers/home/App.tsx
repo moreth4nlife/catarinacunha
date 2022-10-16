@@ -6,12 +6,16 @@ import Career from "../_career/Career";
 import Portfolio from "../_portfolio/Portfolio";
 import Skills from "../_skills/Skills";
 import Footer from "../_footer/Footer";
+import { useWindowSize } from "../../utils/ResponsiveHook"
 import "./App.css";
 
 function App() {
+  const { width } = useWindowSize();
+
   useEffect(() => {
-    document.title = "Catarina Cunha"
+    document.title = "Catarina Cunha";
   }, [])
+
 
   return (
     <>
@@ -21,6 +25,7 @@ function App() {
           <About />
           <Career />
           <Portfolio />
+          {width && width > 768 && <Skills />}
           <Footer />
         </div>
       </main>

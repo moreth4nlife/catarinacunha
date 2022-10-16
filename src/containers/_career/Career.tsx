@@ -15,13 +15,8 @@ interface Education {
 
 const experience: Experience[] = [
   {
-    company: "MO Fashion",
-    period: "2021 - Present",
-    position: ["Sales assistant"]
-  },
-  {
     company: "Cantinho do Tareco",
-    period: "2014 - 2019",
+    period: "2014 - 2021",
     position: ["Volunteer"]
   },
   {
@@ -30,9 +25,9 @@ const experience: Experience[] = [
     position: ["Apple sales consultant"]
   },
   {
-    company: "SpringEvents",
-    period: "2018 - 2019",
-    position: ["Dior sales consultant", "Netflix event hostess"],
+    company: "IdeiasXL",
+    period: "2018",
+    position: ["Graphic design trainee"],
   },
 ]
 
@@ -51,6 +46,11 @@ const education: Education[] = [
     university: "Universidade da Maia",
     period: "2015 - 2018",
     course: "Bachelor Degree in Communication Sciences — Marketing & Advertising",
+  },
+  {
+    university: "Escola de Moda do Porto",
+    period: "2012 - 2013",
+    course: "Technical-professional course in Fashion Production & Coordination",
   },
 ]
 

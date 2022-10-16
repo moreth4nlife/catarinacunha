@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Accordion from "react-fast-accordion";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import SkillTag from '../../components/skill_tag/SkillTag';
 import './_skills.css';
@@ -6,15 +7,39 @@ import './_skills.css';
 const skills = [
   {
     title: "Soft skills",
-    skills: ["Technology proficiency", "Market analysis & research", "Storytelling"]
+    skills: [
+      "Project mannagement",
+      "Creative thinking",
+      "Detail oriented",
+      "Teamworker",
+      "Leadership",
+      "Autonomy",
+      "Curiosity"
+    ]
   },
   {
     title: "Marketing & Communication",
-    skills: ["Technology proficiency", "Market analysis & research", "Storytelling"]
+    skills: [
+      "Technology proficiency",
+      "Market analysis & research",
+      "Visual marketing",
+      "Storytelling",
+      "Public speech",
+      "Digital marketing",
+      "Written & verbal communication"
+    ]
   },
   {
     title: "Technical design skills",
-    skills: ["Technology proficiency", "Market analysis & research", "Storytelling", "Market analysis & research", "Market analysis & research"]
+    skills: [
+      "Design as a problem solver",
+      "Information architecture",
+      "UX & UI Research",
+      "User centered design",
+      "Prototyping",
+      "Wireframing",
+      "Userflow"
+    ]
   },
 ]
 
@@ -74,19 +99,19 @@ const Skills = () => {
 
   return (
     <>
-      <div className='section-title'>
+      <div className="section-title" id="skills">
         <h2>My skills</h2>
       </div>
 
       <section className="skills--wrapper">
 
         <div className="skills--intro left">
-          <h2>Just a brief introduction</h2>
+          <h3>Just a brief introduction</h3>
           <p>I firmely believe that every single person brings something unique to the table. That being said, my idea is not to show you a generic list of skills.
             <br />
             These are my personal skills.
-            <br />
-            As you have been learning throughout this page, my course as a professional has just the same ammount as a designer as a communicator. </p>
+            <br /><br />
+            As you have been learning throughout this page, my course as a professional has just the same amount as a designer as a communicator. </p>
         </div>
 
         <div className="skills--intro right" role={"img"} aria-label={"emoji_skills"} />

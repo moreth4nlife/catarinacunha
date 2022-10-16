@@ -1,27 +1,27 @@
 export const NavLinks = [
   {
     title: "About me",
-    url: "#about",
+    url: "/#about",
     class: "nav__link"
   },
   {
     title: "Career",
-    url: "#career",
+    url: "/#career",
     class: "nav__link"
   },
   {
     title: "Portfolio",
-    url: "#portfolio",
+    url: "/#portfolio",
     class: "nav__link"
   },
   {
     title: "Skills",
-    url: "#skills",
-    class: "nav__link"
+    url: "/#skills",
+    class: "nav__link skills"
   },
   {
     title: "Contact",
-    url: "#contacts",
+    url: "/#contacts",
     class: "nav__link contacts"
   }
 ]

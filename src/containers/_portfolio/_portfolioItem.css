@@ -25,6 +25,11 @@
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  font-size: 20px;
+}
+
+.header__info h2 {
+  font-size: 48px;
 }
 
 .keyword__label {
@@ -44,10 +49,14 @@
   justify-content: center;
   flex-direction: column;
 }
+.item--article h3 {
+  font-size: 28px;
+}
 .article__description {
   margin-top: 30px;
   column-count: 2;
   column-gap: 30px;
+  font-size: 20px;
 }
 
 .gallery--wrapper {
@@ -81,7 +90,7 @@
   .item__header {
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   
   .header__info, .item--article {

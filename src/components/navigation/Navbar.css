@@ -21,6 +21,7 @@
   left: 0;
   margin: 0;
   background-color: var(--pink);
+  z-index: 999;
 }
 .nav--list {
   width: 100%;
@@ -148,9 +149,10 @@
   }
   .logo {
     grid-column: 1 / span 3;
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 60px;
     border-left: 1px solid var(--grey);
+    justify-content: flex-start;
   }
   .nav--contacts {
     display: none;
@@ -163,9 +165,16 @@
   .nav--contacts .nav--contacts__text {
     padding: 8px 15px;
   }
+  
 }
 
-/*/ Tablets /*/
+/*/ Media Queries /*/
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .nav__link.skills {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .nav--mobile-wrapper {
@@ -193,6 +202,7 @@
     display: none;
     transition: all 1s linear;
   }
+
 }
 
 @media screen and (min-width: 769px) {

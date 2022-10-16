@@ -79,3 +79,19 @@
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 768px) { 
+
+  .header--block.left {
+    padding-top: 0;
+  }
+
+  .header--block.right {
+    margin: 0;
+    width: 160px;
+    height: 100px;
+    align-self: flex-start;
+    background-size: 100%;
+    background-position: center center;
+  }
+}

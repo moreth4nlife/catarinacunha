@@ -21,6 +21,10 @@
   padding: 0 4rem;
 }
 
+.career--block h3 {
+  font-size: 28px;
+}
+
 .career--block.left {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -42,6 +46,7 @@
 .education--block {
   margin: 2rem 0 0 0;
   text-align: left;
+  font-size: 20px;
 }
 .experience--block div:not(:last-child),
 .education--block div:not(:last-child) {
@@ -64,5 +69,9 @@
   .section-title,
   .career--block {
     padding: 2rem;
+  }
+  .career--block.left, .career--block.right {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }

@@ -5,9 +5,9 @@ import "./_footer.css";
 const Footer = () => {
   return (
     <>
-      <section className='footer--wrapper'>
+      <section className='footer--wrapper' id="contacts">
         <div className='footer__title'>
-          <h2>Contact me</h2>
+          <h3>Contact me</h3>
         </div>
         <div className='footer__emoji' role="img" aria-label="emoji_footer" />
         <div className='footer__contacts'>

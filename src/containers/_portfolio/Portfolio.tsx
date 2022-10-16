@@ -23,9 +23,18 @@ const Portfolio = () => {
                 <h3>{item.title}</h3>
                 <p>{item.shortDescription}</p>
 
+                <div style={{ margin: "30px 0" }}>
+                  <strong>
+                    Keywords:
+                  </strong>
+                  {item.keywords?.map((keyword, index) =>
+                    <span key={index} className='keyword__label'>{`${keyword};`}</span>
+                  )}
+                </div>
+
                 <div className='item--footer'>
                   {item.date}
-                  <Link to={`portfolio/${item.id}`}>View project <span className='item__icon'><HiArrowSmUp /></span></Link>
+                  <Link to={item.externalLink}>View project <span className='item__icon'><HiArrowSmUp /></span></Link>
                 </div>
               </li>
             </div>

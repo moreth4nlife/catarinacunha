@@ -1,13 +1,14 @@
 .footer--wrapper {
-  padding: 4rem 4rem 0 4rem;
+  padding: 0 4rem;
   display: grid;
   grid-column: 1 / span 4;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
+  min-height: 300px;
 }
 
 .footer__title h3 {
-  font-size: 48px;
+  font-size: 28px;
   color: var(--grey);
   text-align: left;
 }
@@ -15,18 +16,20 @@
 .footer__emoji {
   grid-column: 2 / 4;
   display: block;
+  min-height: 215px;
+  max-height: 200px;
+  height: 100%;
+  background-size: contain;
+  align-self: flex-end;
 }
 
 .footer__emoji__mobile {
   display: none;
+  background-size: 50%;
 }
 
 .footer__emoji, .footer__emoji__mobile {
   background: url("../../assets/images/_avatarFooter.svg") no-repeat center;
-  background-size: auto;
-  background-size: 50%;
-  min-width: 300px;
-  min-height: 300px;
 }
 
 .footer__contacts {
@@ -37,6 +40,7 @@
 
 .footer__contacts a {
   color: var(--grey);
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -80,6 +84,9 @@
 
 @media screen and (max-width: 480px) {
   .footer__emoji__mobile {
-    background-size: 50%;
+    width: 153px;
+    height: 150px;
+    background-size: 100%;
+    margin: 0;
   }
 }
